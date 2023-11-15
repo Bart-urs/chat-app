@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="chat-container">
+        <div id="message-list"></div>
+        <div id="message-input">
+            <input type="text" id="message-box" placeholder="Wpisz wiadomość...">
+            <button id="emoji-button">😀</button>
+            <button id="send-button">Wyślij</button>
+        </div>
+    </div>
+
+    <div id="emoji-modal" style="display: none;">
+        <div id="emoji-picker"></div>
+    </div>
+
+    <form id="login-form">
+        <label for="username">Username:</label>
+        <input type="text" id="username" required>
+        <label for="password">Password:</label>
+        <input type="password" id="password" required>
+        <input type="submit" value="Log in">
+    </form>
+
+    <script src="script.js"></script>
+</body>
+</html>
