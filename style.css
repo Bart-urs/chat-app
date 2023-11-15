@@ -22,8 +22,13 @@ body {
 }
 
 #message-list div {
-    padding: 10px 0;
+    padding: 2px 0;
+    margin: 2px 0;
     animation: slideIn 0.3s ease-out;
+}
+
+#message-list div p:first-child {
+    font-weight: bold;
 }
 
 #message-input {
@@ -32,9 +37,14 @@ body {
     align-items: center;
 }
 
-#message-box {
+#input-container {
     flex-grow: 1;
     margin-right: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+#message-box {
     padding: 10px;
     border: 1px solid #ddd;
     border-radius: 5px;
@@ -118,8 +128,21 @@ body {
     background-color: #fefefe;
     margin: 15% auto;
     padding: 20px;
-    border: 1px solid #888;
+    /* border: 1px solid #888; */
     width: 80%;
+}
+
+#emoji-button {
+    border: none; /* Usuwa obwódkę */
+    margin-right: 10px; /* Dodaje przestrzeń po prawej stronie ikony */
+}
+
+.even {
+    background-color: #f0f0f0; /* Jakiś kolor dla parzystych wiadomości */
+}
+
+.odd {
+    background-color: #ffffff; /* Jakiś kolor dla nieparzystych wiadomości */
 }
 
 @keyframes slideIn {

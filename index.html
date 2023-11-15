@@ -10,7 +10,11 @@
     <div id="chat-container">
         <div id="message-list"></div>
         <div id="message-input">
-            <input type="text" id="message-box" placeholder="Wpisz wiadomość...">
+            <div id="input-container">
+                <input type="text" id="message-box" placeholder="Wpisz wiadomość...">
+                <!-- tutaj będzie dodawana miniaturka -->
+            </div>
+            <input type="file" id="mediaFile" name="mediaFile">
             <button id="emoji-button">😀</button>
             <button id="send-button">Wyślij</button>
         </div>
@@ -21,6 +25,7 @@
     </div>
 
     <form id="login-form">
+        <p id="login-message"></p>
         <label for="username">Username:</label>
         <input type="text" id="username" required>
         <label for="password">Password:</label>
