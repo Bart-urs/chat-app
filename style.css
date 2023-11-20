@@ -63,7 +63,7 @@ body {
     background-color: #45a049;
 }
 
-#login-form {
+#register-form, #login-form {
     width: 80%;
     max-width: 300px;
     margin: 20px auto;
@@ -74,16 +74,16 @@ body {
     transition: all 0.3s ease;
 }
 
-#login-form:hover {
+#register-form:hover, #login-form:hover {
     box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.2);
 }
 
-#login-form label {
+#register-form label, #login-form label {
     margin-bottom: 10px;
     font-weight: bold;
 }
 
-#login-form input[type="text"], #login-form input[type="password"] {
+#register-form input[type="text"], #register-form input[type="password"], #login-form input[type="text"], #login-form input[type="password"] {
     box-sizing: border-box;
     width: 100%;
     padding: 10px;
@@ -93,12 +93,12 @@ body {
     transition: all 0.3s ease;
 }
 
-#login-form input[type="text"]:focus, #login-form input[type="password"]:focus {
+#register-form input[type="text"]:focus, #register-form input[type="password"]:focus, #login-form input[type="text"]:focus, #login-form input[type="password"]:focus {
     border-color: #4CAF50;
     outline: none;
 }
 
-#login-form input[type="submit"] {
+#register-form input[type="submit"], #login-form input[type="submit"] {
     width: 100%;
     padding: 10px;
     border: none;
@@ -109,7 +109,7 @@ body {
     transition: all 0.3s ease;
 }
 
-#login-form input[type="submit"]:hover {
+#register-form input[type="submit"]:hover, #login-form input[type="submit"]:hover {
     background-color: #45a049;
 }
 
@@ -128,21 +128,20 @@ body {
     background-color: #fefefe;
     margin: 15% auto;
     padding: 20px;
-    /* border: 1px solid #888; */
     width: 80%;
 }
 
 #emoji-button {
-    border: none; /* Usuwa obwódkę */
-    margin-right: 10px; /* Dodaje przestrzeń po prawej stronie ikony */
+    border: none;
+    margin-right: 10px;
 }
 
 .even {
-    background-color: #f0f0f0; /* Jakiś kolor dla parzystych wiadomości */
+    background-color: #f0f0f0;
 }
 
 .odd {
-    background-color: #ffffff; /* Jakiś kolor dla nieparzystych wiadomości */
+    background-color: #ffffff;
 }
 
 .delete-button {
@@ -152,7 +151,7 @@ body {
     margin-top: 10px;
     margin-bottom: 10px;
     padding: 10px 20px;
-    background-color: #f44336; /* Czerwony kolor tła */
+    background-color: #f44336;
     color: white;
     border: none;
     border-radius: 5px;
@@ -160,9 +159,9 @@ body {
 }
 
 .deleted-message {
-    color: #ff0000; /* Zmień na kolor, który chcesz */
-    font-size: 14px; /* Zmień na rozmiar, który chcesz */
-    text-align: center; /* Wyśrodkowuje tekst */
+    color: #ff0000;
+    font-size: 14px;
+    text-align: center;
 }
 
 @keyframes slideIn {
