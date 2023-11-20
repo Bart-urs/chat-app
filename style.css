@@ -145,6 +145,26 @@ body {
     background-color: #ffffff; /* Jakiś kolor dla nieparzystych wiadomości */
 }
 
+.delete-button {
+    font-size: 12px;
+    padding: 5px;
+    margin-left: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 10px 20px;
+    background-color: #f44336; /* Czerwony kolor tła */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.deleted-message {
+    color: #ff0000; /* Zmień na kolor, który chcesz */
+    font-size: 14px; /* Zmień na rozmiar, który chcesz */
+    text-align: center; /* Wyśrodkowuje tekst */
+}
+
 @keyframes slideIn {
     from {
         transform: translateY(100%);

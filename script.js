@@ -79,14 +79,20 @@ function sendMessage() {
         messageContentContainer.style.display = 'flex';
         messageContentContainer.style.flexDirection = 'column';
 
+        let messageHeader = document.createElement('div');
+        messageHeader.style.display = 'flex';
+        messageHeader.style.justifyContent = 'space-between';
+
         let userName = document.createElement('p');
         userName.innerHTML = `<strong>${currentUser}</strong>`;
-        messageContentContainer.appendChild(userName);
+        messageHeader.appendChild(userName);
 
         let timestamp = document.createElement('p');
         let date = new Date();
         timestamp.textContent = date.toLocaleString();
-        messageContentContainer.appendChild(timestamp);
+        messageHeader.appendChild(timestamp);
+
+        messageContentContainer.appendChild(messageHeader);
 
         let messageText = document.createElement('p');
         messageText.textContent = messageContent;
@@ -95,8 +101,8 @@ function sendMessage() {
         newMessage.appendChild(messageContentContainer);
 
         let deleteButton = document.createElement('button');
-        deleteButton.textContent = 'Usuń';
-        newMessage.appendChild(deleteButton);
+        deleteButton.classList.add('delete-button');
+        deleteButton.textContent = 'Usuń wiadomość';
 
         if (file) {
             const reader = new FileReader();
@@ -106,6 +112,7 @@ function sendMessage() {
                 img.style.width = '100%';
                 img.style.height = 'auto';
                 newMessage.appendChild(img);
+                newMessage.appendChild(deleteButton);
                 mediaFile.value = '';
 
                 while (thumbnailContainer.firstChild) {
@@ -114,6 +121,8 @@ function sendMessage() {
                 messageBox.style.paddingRight = '';
             };
             reader.readAsDataURL(file);
+        } else {
+            newMessage.appendChild(deleteButton);
         }
 
         messageList.appendChild(newMessage);
@@ -121,6 +130,7 @@ function sendMessage() {
 
         deleteButton.addEventListener('click', function() {
             newMessage.textContent = 'Wiadomość została usunięta';
+            newMessage.classList.add('deleted-message');
         });
 
         setTimeout(() => {
