@@ -164,6 +164,19 @@ body {
     text-align: center;
 }
 
+.logout-button {
+    padding: 10px 20px;
+    margin-top: 10px;
+    background-color: #f44336; /* czerwony */
+    color: white;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 @keyframes slideIn {
     from {
         transform: translateY(100%);
